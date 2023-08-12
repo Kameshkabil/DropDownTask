@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        div {
+            width: 300px;
+            border: 1px solid red;
+            padding: 20px;
+            margin: 0 auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Profile Page</h1>
+    <div>Name: <span id="name"></span>
+        <br><br>
+        Role: <span id="role"></span>
+    </div>
+
+    <script>
+        const empName = localStorage.getItem('empName');
+        let name = document.getElementById('name').textContent = empName;
+        let role = document.getElementById('role');
+
+
+        if (empName == 'kotteswaran') {
+            role.textContent = 'EmberJs Developer';
+        }
+        else if (empName == 'kameshkabil') {
+            role.textContent = 'ReactJs Developer';
+        }
+        else if (empName == 'vigneshwaran') {
+            role.textContent = 'Tester';
+        }
+        else if (empName == 'nagaraj') {
+            role.textContent = 'TesterJava selenium';
+        }
+        else if (empName == 'naveenkumar') {
+            role.textContent = 'UI/UX';
+        }
+        else if (empName == 'dillikumar') {
+            role.textContent = 'Project Manager';
+        }
+        else if (empName == 'ganesh') {
+            role.textContent = 'Devops Engineer';
+        }
+        else if (empName == 'santhaprasanth') {
+            role.textContent = 'BackEnd Developer';
+        }
+        else if (empName == 'vijayaraj') {
+            role.textContent = 'Android Developer';
+        }
+        else {
+            role.textContent = 'Cloud Engineer';
+        }
+    </script>
+</body>
+
+</html>
